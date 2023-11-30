@@ -48,7 +48,7 @@ def send_to_database(data, table_name):
     db_params = {
         'host': 'localhost',
         'user': 'ronaldochoiga',
-        'password': 'Prince@ronaldo1',
+        'password': 'test_password',
         'database': 'binance_database',
     }
 

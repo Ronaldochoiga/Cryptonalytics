@@ -16,12 +16,12 @@ import pymysql
 app = Flask(__name__)
 API_KEY = '62beabd5-0e1f-4968-8c3d-62455aa321d1'
 BASE_URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
-app.secret_key = 'Prince@ronaldo1'
+app.secret_key = 'test_secret'
 user_data = {'user@example.com': {'password': 'user_password'}}
 # MySQL Configuration
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'ronaldochoiga'
-app.config['MYSQL_PASSWORD'] = 'Prince@ronaldo1'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'test_password'
 app.config['MYSQL_DB'] = 'users_database'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
@@ -79,7 +79,7 @@ def login_post():
         error = 'Invalid login'
         return render_template('login.html', error=error)
 def get_user_by_email(email):
-    connection = pymysql.connect(host='localhost', user='ronaldochoiga', password='Prince@ronaldo1', database='users_database')
+    connection = pymysql.connect(host='localhost', user='ronaldochoiga', password='test_password', database='users_database')
     try:
         with connection.cursor() as cursor:
             query = "SELECT * FROM users WHERE email = %s"

@@ -6,7 +6,7 @@ from operator import itemgetter
 db_params = {
     'host': 'localhost',
     'user': 'ronaldochoiga',
-    'password': 'Prince@ronaldo1',
+    'password': 'test_password',
     'database': 'binance_database',
 }
 

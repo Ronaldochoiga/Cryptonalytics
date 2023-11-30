@@ -6,7 +6,7 @@ def configure_login(app):
     # Configure MySQL
     app.config['MYSQL_HOST'] = 'localhost'
     app.config['MYSQL_USER'] = 'ronaldochoiga'
-    app.config['MYSQL_PASSWORD'] = 'Prince@ronaldo1'
+    app.config['MYSQL_PASSWORD'] = 'test_password'
     app.config['MYSQL_DB'] = 'users_database'
     app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 

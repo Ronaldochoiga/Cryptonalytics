@@ -7,7 +7,7 @@ def init_app(app):
     # Initialize the app with MySQL configurations
     app.config['MYSQL_HOST'] = 'localhost'
     app.config['MYSQL_USER'] = 'root'
-    app.config['MYSQL_PASSWORD'] = 'Prince@ronaldo1'
+    app.config['MYSQL_PASSWORD'] = 'test_password'
     app.config['MYSQL_DB'] = 'users_database'
     app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
     mysql.init_app(app)
