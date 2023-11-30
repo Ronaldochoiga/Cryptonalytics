@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinGecko Redirect</title>
+</head>
+<body>
+    <h1>CoinGecko Search</h1>
+    <form id="searchForm">
+        <label for="searchInput">Enter Crypto Symbol:</label>
+        <input type="text" id="searchInput" name="searchInput" required>
+        <button type="button" onclick="redirectToCoinGecko()">Search</button>
+	<link rel="stylesheet" href="{{ url_for('static', filename='coingecko.css') }}">
+    </form>
+
+    <script>
+        function redirectToCoinGecko() {
+            // Get the search input value
+            const searchInput = document.getElementById('searchInput').value;
+
+            // Redirect to CoinGecko search URL
+            window.location.href = `https://www.coingecko.com/en/coins/${searchInput}`;
+        }
+    </script>
+</body>
+</html>

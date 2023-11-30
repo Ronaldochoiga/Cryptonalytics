@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='coinmarketcap.css') }}">
+</head>
+<body>
+    <h1>Crypto Search</h1>
+    <form id="cryptoForm" onsubmit="redirectToCoinMarketCap(); return false;">
+        <label for="symbol">Enter Crypto Symbol:</label>
+        <input type="text" id="symbol" name="symbol" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <script>
+        function redirectToCoinMarketCap() {
+            var symbolInput = document.getElementById('symbol');
+            var symbol = symbolInput.value.toUpperCase();
+
+            // Redirect to CoinMarketCap with the specific coin symbol
+            window.location.href = 'https://coinmarketcap.com/currencies/' + symbol + '/';
+
+            // Optional: You can open the link in a new tab
+            // window.open('https://coinmarketcap.com/currencies/' + symbol + '/', '_blank');
+        }
+    </script>
+</body>
+</html>

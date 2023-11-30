@@ -1,0 +1,16 @@
+--2023-11-22 12:16:51--  https://images.app.goo.gl/Md2dQtqcy9Xt481o6
+Resolving images.app.goo.gl (images.app.goo.gl)... 172.217.170.174, 2a00:1450:401a:800::200e
+Connecting to images.app.goo.gl (images.app.goo.gl)|172.217.170.174|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www.google.com/imgres?imgurl=https://www.shutterstock.com/image-vector/tether-coin-crypto-currency-themed-260nw-1968955498.jpg&tbnid=RlyZkKHNZ3MYcM&vet=1&imgrefurl=https://www.shutterstock.com/search/usdt&docid=ztqlV2zIo_2luM&w=456&h=280&source=sh/x/im/m1/1 [following]
+--2023-11-22 12:16:52--  https://www.google.com/imgres?imgurl=https://www.shutterstock.com/image-vector/tether-coin-crypto-currency-themed-260nw-1968955498.jpg&tbnid=RlyZkKHNZ3MYcM&vet=1&imgrefurl=https://www.shutterstock.com/search/usdt&docid=ztqlV2zIo_2luM&w=456&h=280&source=sh/x/im/m1/1
+Resolving www.google.com (www.google.com)... 172.217.170.196, 2a00:1450:401a:800::2004
+Connecting to www.google.com (www.google.com)|172.217.170.196|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘Md2dQtqcy9Xt481o6’
+
+     0K .......... .......... .......... .......... ...         344K=0.1s
+
+2023-11-22 12:16:53 (344 KB/s) - ‘Md2dQtqcy9Xt481o6’ saved [44702]
+

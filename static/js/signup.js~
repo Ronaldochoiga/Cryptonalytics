@@ -1,0 +1,29 @@
+$(document).ready(function () {
+    // Handle form submission
+    $('#signupForm').submit(function (e) {
+        e.preventDefault();
+
+        // Get form data
+        var formData = {
+            username: $('#username').val(),
+            email: $('#email').val(),
+            password: $('#password').val()
+        };
+
+        // Send form data to Flask using AJAX
+        $.ajax({
+            type: 'POST',
+            url: '/signup',  // Flask route for signup
+            contentType: 'application/json;charset=UTF-8',
+            data: JSON.stringify(formData),
+            success: function (response) {
+                // Handle success, e.g., redirect to a new page
+                window.location.href = response.redirect;
+            },
+            error: function (error) {
+                // Handle error
+                console.error('Error:', error);
+            }
+        });
+    });
+});

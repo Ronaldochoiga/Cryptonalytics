@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #00FF00;
+}
+
+#data-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #00FF00;
+    color: white;
+}
+/* Change text color of current price and percentage_change_24h to red */
+td:nth-child(2), td:nth-child(3) {
+    color: green;
+}

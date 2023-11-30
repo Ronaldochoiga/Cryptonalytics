@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+    <div class="welcome-message">
+        <p>Welcome to the Dashboard, {{ username }}!</p>
+    </div>
+    <div class="button-container">
+        <a href="{{ url_for('gainers_fetch') }}" class="dashboard-button">Gainers</a>
+        <a href="{{ url_for('losers_fetch') }}" class="dashboard-button">Losers</a>
+        <a href="{{ url_for('higher_cap') }}" class="dashboard-button">Top Traded</a>
+        <a href="{{ url_for('coingecko') }}" class="dashboard-button">CoinGecko</a>
+        <a href="{{ url_for('coinmarketcap') }}" class="dashboard-button">CoinMarketCap</a>
+    </div>
+</body>
+</html>

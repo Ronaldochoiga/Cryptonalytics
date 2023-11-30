@@ -1,0 +1,16 @@
+--2023-11-29 14:49:44--  https://images.app.goo.gl/tCRmGRFcR1XgB46c7
+Resolving images.app.goo.gl (images.app.goo.gl)... 172.217.170.174, 2a00:1450:401a:801::200e
+Connecting to images.app.goo.gl (images.app.goo.gl)|172.217.170.174|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www.google.com/imgres?imgurl=https://play-lh.googleusercontent.com/DhUU3dwLN6m16DzILuK_alrFUOzzzMaOB2TzXs9PAZ7cLEv388vdRB1QV4JKnwRjlDg&tbnid=TeOaJo0U5We-tM&vet=1&imgrefurl=https://play.google.com/store/apps/details?id%3Dcom.coinmarketcap.android%26hl%3Den_ZA&docid=EUOfBkgP83w0NM&w=512&h=512&source=sh/x/im/m1/1 [following]
+--2023-11-29 14:49:45--  https://www.google.com/imgres?imgurl=https://play-lh.googleusercontent.com/DhUU3dwLN6m16DzILuK_alrFUOzzzMaOB2TzXs9PAZ7cLEv388vdRB1QV4JKnwRjlDg&tbnid=TeOaJo0U5We-tM&vet=1&imgrefurl=https://play.google.com/store/apps/details?id%3Dcom.coinmarketcap.android%26hl%3Den_ZA&docid=EUOfBkgP83w0NM&w=512&h=512&source=sh/x/im/m1/1
+Resolving www.google.com (www.google.com)... 172.217.170.196, 2a00:1450:401a:801::2004
+Connecting to www.google.com (www.google.com)|172.217.170.196|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘tCRmGRFcR1XgB46c7’
+
+     0K .......... .......... .......... .......... ...        41.2K=1.1s
+
+2023-11-29 14:49:47 (41.2 KB/s) - ‘tCRmGRFcR1XgB46c7’ saved [44971]
+

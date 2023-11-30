@@ -1,0 +1,16 @@
+--2023-11-22 12:13:18--  https://images.app.goo.gl/cpqfYRc2gJf8bH7A9
+Resolving images.app.goo.gl (images.app.goo.gl)... 172.217.170.174, 2a00:1450:401a:800::200e
+Connecting to images.app.goo.gl (images.app.goo.gl)|172.217.170.174|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://www.google.com/imgres?imgurl=https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q%3D80%26w%3D1000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8N3x8Yml0Y29pbnxlbnwwfHwwfHx8MA%253D%253D&tbnid=OhfLxl7oO2yVVM&vet=1&imgrefurl=https://unsplash.com/s/photos/bitcoin&docid=fNGK8M9gXAZkRM&w=1000&h=665&source=sh/x/im/m1/1 [following]
+--2023-11-22 12:13:20--  https://www.google.com/imgres?imgurl=https://images.unsplash.com/photo-1621416894569-0f39ed31d247?q%3D80%26w%3D1000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.0.3%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8N3x8Yml0Y29pbnxlbnwwfHwwfHx8MA%253D%253D&tbnid=OhfLxl7oO2yVVM&vet=1&imgrefurl=https://unsplash.com/s/photos/bitcoin&docid=fNGK8M9gXAZkRM&w=1000&h=665&source=sh/x/im/m1/1
+Resolving www.google.com (www.google.com)... 172.217.170.196, 2a00:1450:401a:800::2004
+Connecting to www.google.com (www.google.com)|172.217.170.196|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘cpqfYRc2gJf8bH7A9’
+
+     0K .......... .......... .......... .......... ....        463K=0.1s
+
+2023-11-22 12:13:21 (463 KB/s) - ‘cpqfYRc2gJf8bH7A9’ saved [45180]
+

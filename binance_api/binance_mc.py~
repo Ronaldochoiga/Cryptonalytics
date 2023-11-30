@@ -1,0 +1,30 @@
+import requests
+
+def get_binance_top_200():
+    binance_api_url = 'https://api.binance.com/api/v3/ticker/24hr'
+
+    try:
+        # Make a GET request to get the 24-hour price statistics for all symbols
+        response = requests.get(binance_api_url)
+
+        # Check if the request was successful (status code 200)
+        if response.status_code == 200:
+            # Parse the JSON response
+            ticker_data = response.json()
+
+            # Sort symbols based on market cap (Note: Market cap is not directly provided, you might need additional data for accurate market cap calculation)
+            sorted_symbols = sorted(ticker_data, key=lambda x: float(x['quoteVolume']), reverse=True)[:1000]
+
+            # Print information about the top 200 cryptocurrencies
+            print("Top 1000 Cryptocurrencies on Binance (based on market cap):")
+            for symbol in sorted_symbols:
+                print(f"Symbol: {symbol['symbol']}, Quote Volume: {symbol['quoteVolume']}")
+
+        else:
+            print(f"Error: Unable to fetch data. Status Code: {response.status_code}")
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    get_binance_top_200()

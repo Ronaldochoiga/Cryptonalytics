@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOSERS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='losers_fetch.css') }}">
+</head>
+<body>
+    <h1>LOSERS</h1>
+    <div id="data-container"></div>
+
+    <script>
+        function fetchData() {
+            // Use AJAX to fetch data from the server every few seconds
+            setInterval(function () {
+                fetch('/get_losers')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        updateDataOnPage(data);
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            }, 60000); // Update every 1 minute (adjust as needed)
+
+            // Initial data fetch
+            fetch('/get_losers')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    updateDataOnPage(data);
+                })
+                .catch(error => console.error('Error fetching initial data:', error));
+        }
+
+        function updateDataOnPage(data) {
+            console.log(data);
+            // Update the webpage with the latest data
+            const dataContainer = document.getElementById('data-container');
+            dataContainer.innerHTML = '';
+
+            // create a table to organize the data yourself
+            const table = document.createElement('table');
+            table.border = '1';
+
+            // Create the table header
+            const headerRow = table.insertRow();
+            const coinHeader = headerRow.insertCell(0);
+            coinHeader.textContent = 'Coin';
+            const priceHeader = headerRow.insertCell(1);
+            priceHeader.textContent = 'Price';
+            const percentageHeader = headerRow.insertCell(2);
+            percentageHeader.textContent = 'Percentage';
+
+            // Check if data is an array before trying to access its properties
+            if (Array.isArray(data)) {
+                // Populate the cells with data with the following code.
+                data.forEach(row => {
+                    const tableRow = table.insertRow();
+                    const coinCell = tableRow.insertCell(0);
+                    coinCell.textContent = row && row.coin_symbol ? row.coin_symbol : 'N/A';
+                    const priceCell = tableRow.insertCell(1);
+                    priceCell.textContent = row && row.current_price ? row.current_price : 'N/A';
+                    const percentageCell = tableRow.insertCell(2);
+                    percentageCell.textContent = row && row.percentage_change_24h ? row.percentage_change_24h : 'N/A';
+                });
+                
+                // append the table to the data container
+                dataContainer.appendChild(table);
+            } else {
+                // Display a message if the data structure is unexpected
+                dataContainer.textContent = 'Unexpected data structure.';
+            }
+        }
+
+        // Call the fetchData function when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchData();
+        });
+    </script>
+</body>
+</html>
