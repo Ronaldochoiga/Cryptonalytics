@@ -4,7 +4,7 @@ CRYPTONALYTICS
 DEPLOYED ON www.alchemist19.tech
 linkedln profile: https://www.linkedin.com/in/ronaldo-choiga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 
-Blog post: 
+Blog post: https://medium.com/@choigaronaldo/cryprtonalytics-4cef14dcdec8
 
 Being a web app this project does not require any installation since you only have to follow the above domain.
 usage:
