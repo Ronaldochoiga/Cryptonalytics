@@ -1,4 +1,6 @@
 CRYPTONALYTICS
+
+
 DEPLOYED ON www.alchemist19.tech
 linkedln profile:
 Being a web app this project does not require any installation since you only have to follow the above domain.
