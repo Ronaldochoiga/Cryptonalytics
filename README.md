@@ -2,7 +2,10 @@ CRYPTONALYTICS
 
 
 DEPLOYED ON www.alchemist19.tech
-linkedln profile:
+linkedln profile: https://www.linkedin.com/in/ronaldo-choiga?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
+Blog post: 
+
 Being a web app this project does not require any installation since you only have to follow the above domain.
 usage:
 This project is one of the many platforms that help in the analysis of cryptocurrencies. Tijhis project helps in better investments decisions and so on.
