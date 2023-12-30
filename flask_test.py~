@@ -27,13 +27,21 @@ scheduler = BackgroundScheduler()
 app = Flask(__name__)
 API_KEY = '62beabd5-0e1f-4968-8c3d-62455aa321d1'
 BASE_URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest'
+<<<<<<< HEAD
 app.secret_key = 'Prince@ronaldo1'
 login_manager = LoginManager(app)
+=======
+app.secret_key = ''
+>>>>>>> a7b8a258312fef0da3078aab9216a54cf8e6dbaa
 user_data = {'user@example.com': {'password': 'user_password'}}
 # MySQL Configuration
 app.config['MYSQL_HOST'] = '3.85.54.217'
 app.config['MYSQL_USER'] = 'ronaldochoiga'
+<<<<<<< HEAD
 app.config['MYSQL_PASSWORD'] = 'Ronaldo@choiga1'
+=======
+app.config['MYSQL_PASSWORD'] = ''
+>>>>>>> a7b8a258312fef0da3078aab9216a54cf8e6dbaa
 app.config['MYSQL_DB'] = 'users_database'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
