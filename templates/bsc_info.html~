@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSCScan Info</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>BSCScan Information</h2>
+
+        <!-- Form to add labeled addresses -->
+        <form id="addAddressForm">
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" required>
+            </div>
+            <div class="form-group">
+                <label for="label">Label:</label>
+                <input type="text" class="form-control" id="label" required>
+            </div>
+	    <div class="form-group">
+	      <label for="contract_address">Contract Address:</label>
+	      <input type="text" class="form-control" id="contract_address" required>
+            <button type="button" class="btn btn-primary" onclick="addAddress()">Add Address</button>
+        </form>
+
+        <hr>
+
+        <!-- Display labeled addresses -->
+        <h4>Labeled Addresses:</h4>
+        <ul id="addressList" class="list-group">
+            <!-- Address items will be added dynamically here -->
+        </ul>
+
+        <hr>
+
+        <!-- Form to retrieve information -->
+        <h4>Retrieve Information:</h4>
+        <form id="getInfoForm">
+            <div class="form-group">
+                <label for="retrieveAddress">Select Address:</label>
+                <select class="form-control" id="retrieveAddress" required>
+                    <!-- Retrieve addresses dynamically using JavaScript -->
+                </select>
+            </div>
+            <button type="button" class="btn btn-success" onclick="getInfo()">Get Info</button >
+        </form>
+
+        <hr>
+
+        <!-- Display information -->
+        <h4>Information:</h4>
+        <div id="infoContainer">
+            <!-- Information will be displayed dynamically here -->
+        </div>
+    </div>
+
+    <script>
+        // Add labeled address
+        function addAddress() {
+            const addressInput = document.getElementById('address');
+            const labelInput = document.getElementById('label');
+	    const contract_addressinput = document.getElementById('contract_address')
+
+            // AJAX request to add the address to the database
+            fetch('/add_address', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    address: addressInput.value,
+                    label: labelInput.value,
+		    contract_address: contract_addressInput.value,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Clear input fields after successful addition
+                    addressInput.value = '';
+                    labelInput.value = '';
+		    contract_addressInput.value = '';
+
+                    // Reload the labeled addresses list
+                    getLabeledAddresses();
+                }
+            })
+            .catch(error => console.error('Error adding address:', error));
+        }
+
+        // Retrieve labeled addresses and populate the list
+        function getLabeledAddresses() {
+            const addressList = document.getElementById('addressList');
+            addressList.innerHTML = ''; // Clear the list
+
+            // AJAX request to retrieve labeled addresses
+            fetch('/get_labeled_addresses')
+            .then(response => response.json())
+            .then(addresses => {
+                addresses.forEach(address => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'list-group-item';
+                    listItem.textContent = `${address.label}: ${address.address}: ${address.contract_address}`;
+		    // listItem.textContent = `${}`
+                    addressList.appendChild(listItem);
+                });
+
+                // Populate the select options for retrieving information
+                const retrieveAddressSelect = document.getElementById('retrieveAddress');
+                retrieveAddressSelect.innerHTML = '';
+                addresses.forEach(address => {
+                    const option = document.createElement('option');
+                    option.value = address.address;
+                    option.textContent = `${address.address}`;
+                    retrieveAddressSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error retrieving addresses:', error));
+        }
+
+        // Get information for the selected address
+        function getInfo() {
+            const selectedAddress = document.getElementById('retrieveAddress').value;
+
+            // AJAX request to get information for the selected address
+            fetch('/get_info', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    address: selectedAddress,
+		    contract_address: selectedAddress,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const infoContainer = document.getElementById('infoContainer');
+                infoContainer.innerHTML = '';
+
+                // Display information
+                const balanceParagraph = document.createElement('p');
+                balanceParagraph.textContent = `Balance: ${data.balance}`;
+                infoContainer.appendChild(balanceParagraph);
+
+                // Display recent transactions
+                const transactionsHeader = document.createElement('h5');
+                transactionsHeader.textContent = 'Recent Transactions:';
+                infoContainer.appendChild(transactionsHeader);
+		if (Array.isArray(data.transactions)) {
+                const transactionsList = document.createElement('ul');
+                data.transactions.forEach(transaction => {
+                    const transactionItem = document.createElement('li');
+                    transactionItem.textContent = `Txn Hash: ${transaction.hash}, Value: ${transaction.value}`;
+                    transactionsList.appendChild(transactionItem);
+                });
+                infoContainer.appendChild(transactionsList);
+            } else {
+                const noTransactionsMessage = document.createElement('p');
+                noTransactionsMessage.textContent = 'No recent transactions available.';
+                infoContainer.appendChild(noTransactionsMessage);
+            }
+        })
+        .catch(error => console.error('Error getting information:', error));
+    }
+
+        // Initial loading of labeled addresses
+        getLabeledAddresses();
+    </script>
+</body>
+</html>

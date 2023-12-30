@@ -1,0 +1,126 @@
+[2023-12-07 12:08:00 +0000] [370598] [INFO] Starting gunicorn 21.2.0
+[2023-12-07 12:08:00 +0000] [370598] [INFO] Listening at: http://127.0.0.1:8000 (370598)
+[2023-12-07 12:08:00 +0000] [370598] [INFO] Using worker: sync
+[2023-12-07 12:08:00 +0000] [370600] [INFO] Booting worker with pid: 370600
+[2023-12-07 12:45:53,707] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/ubuntu/Cryptonalytics/flask_test.py", line 69, in login_post
+    cur = mysql.connection.cursor()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+[2023-12-07 13:02:46,810] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/ubuntu/Cryptonalytics/flask_test.py", line 69, in login_post
+    cur = mysql.connection.cursor()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+[2023-12-07 13:38:27,127] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/ubuntu/Cryptonalytics/flask_test.py", line 69, in login_post
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+[2023-12-07 13:41:49,535] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/ubuntu/Cryptonalytics/flask_test.py", line 69, in login_post
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+[2023-12-07 14:33:54,091] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask/app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/ubuntu/Cryptonalytics/flask_test.py", line 69, in login_post
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 109, in connection
+    ctx.mysql_db = self.connect
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/flask_mysqldb/__init__.py", line 97, in connect
+    return MySQLdb.connect(**kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/ubuntu/Cryptonalytics/venv/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+[2023-12-07 14:44:15 +0000] [370598] [INFO] Handling signal: term
+[2023-12-07 14:44:15 +0000] [370600] [INFO] Worker exiting (pid: 370600)
+Error fetching data from the database: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+None
+Error fetching data from the database: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+None
+Error fetching data from the database: 'cryptography' package is required for sha256_password or caching_sha2_password auth methods
+None
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+Error during signup: (1045, "Access denied for user 'ronaldochoiga'@'localhost' (using password: YES)")
+[2023-12-07 14:44:15 +0000] [370598] [ERROR] Worker (pid:370600) was sent SIGTERM!
+[2023-12-07 14:44:15 +0000] [370598] [INFO] Shutting down: Master

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+# #!/usr/bin/python3
 import requests
 import pymysql
 
@@ -6,9 +6,9 @@ def connect_to_database():
     try:
         # Establish a connection to the MySQL database
         connection = pymysql.connect(
-            host='localhost',
+            host='3.85.54.217',
             user='ronaldochoiga',
-            password='test_password',
+            password='Ronaldo@choiga1',
             database='binance_database'
         )
 

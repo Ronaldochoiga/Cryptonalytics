@@ -4,9 +4,9 @@ from operator import itemgetter
 
 # Database connection parameters
 db_params = {
-    'host': 'localhost',
+    'host': '3.85.54.217',
     'user': 'ronaldochoiga',
-    'password': 'test_password',
+    'password': 'Ronaldo@choiga1',
     'database': 'binance_database',
 }
 
